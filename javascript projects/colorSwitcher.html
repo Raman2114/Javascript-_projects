@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .canvas{
+            text-align: center;
+            margin: 50vh;
+        }
+        .button{
+            padding:60px;
+            border: 2px solid rgb(33, 9, 9);
+            margin: 1px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>color scheme switcher</h1>
+    <div class="canvas">
+        
+        <span class="button" id="grey" style="background-color: grey;"></span>
+        <span class="button" id="white" style="background-color: white;"></span>
+        <span class="button" id="blue" style="background-color: blue;"></span>
+        <span class="button" id="yellow" style="background-color: yellow;"></span>
+        <span class="button" id="purple" style="background-color: purple;"></span>
+
+
+    </div>
+</body>
+<script>
+    const buttons=document.querySelectorAll('.button');
+    const body=document.querySelector('body');
+
+    buttons.forEach(function (button){
+        console.log(button);
+        button.addEventListener('click',function(e){
+                if(e.target.id=== 'grey'){   
+                    body.style.backgroundColor='grey';
+                }
+                else if(e.target.id=== 'white'){
+                    body.style.backgroundColor='white';
+                }
+                else if(e.target.id=== 'blue'){
+                    body.style.backgroundColor='blue';
+                }
+                else if(e.target.id=== 'yellow'){
+                    body.style.backgroundColor='yellow';
+                }
+                else if(e.target.id=== 'purple'){
+                    body.style.backgroundColor='purple';
+                }
+        })
+    });
+</script>
+</html>
